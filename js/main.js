@@ -21,6 +21,20 @@ tabItem.forEach(btn=>{
 })
 
 
+const menuBtn = document.querySelector(".menu__btn")
+const menu = document.querySelector(".menu__list")
+
+menuBtn.addEventListener("click", ()=>{
+  menu.classList.toggle("menu__list--active")
+  if(menu.classList.contains("menu__list--active")){
+   document.body.style.overflow = "hidden"
+  }else{
+    document.body.style.overflow = ""
+  }
+    
+})
+
+
 
 const swiper = new Swiper(".swiper", {
   loop: true,
