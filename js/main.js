@@ -25,6 +25,7 @@ const menuBtn = document.querySelector(".menu__btn")
 const menu = document.querySelector(".menu__list")
 
 menuBtn.addEventListener("click", ()=>{
+  console.log(menuBtn)
   menu.classList.toggle("menu__list--active")
   if(menu.classList.contains("menu__list--active")){
    document.body.style.overflow = "hidden"

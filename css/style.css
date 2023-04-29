@@ -460,11 +460,10 @@ a {
 }
 
 .tabs__btn {
-    margin: 0 150px;
+    margin: 0 150px 100px;
     display: flex;
     justify-content: space-between;
     gap: 80px;
-    margin-bottom: 100px;
 }
 
 .tabs__btn-item {
@@ -502,6 +501,7 @@ a {
 
 .card__img {
     display: block;
+    width: 100%;
 }
 
 .card__title,
@@ -550,12 +550,21 @@ a {
     .important__item-img {
         width: 100%;
     }
+
+    .tabs__content-item {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }   
 
 @media(max-width: 1040px) {
 
     .video__content {
         width: 100%;
+    }
+
+    .tabs__btn {
+        margin: 0 0 50px;
+        gap: 20px;
     }
 }   
 
@@ -598,6 +607,10 @@ a {
     .important__list {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .tabs__content-item {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -629,6 +642,20 @@ a {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
    }
+}
+
+@media (max-width: 650px) {
+    .tabs__content-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tabs__btn-item {
+        font-size: 18px;
+    }
+
+    .blog__items {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media (max-width: 540px) {
@@ -672,7 +699,8 @@ a {
 
     .how-does,
     .video,
-    .important {
+    .important,
+    .blog {
         margin-bottom: 50px;
     }
 
@@ -706,5 +734,25 @@ a {
         align-items: center;
         gap: 20px;
 
+    }
+
+    .blog__item-title {
+        margin-bottom: 10px;
+    }
+    
+    .blog_item-link {
+        margin-left: auto;
+    }
+
+    .tabs__btn {
+        flex-direction: column;
+    }
+
+    .choose {
+        margin: 50px 0;
+    }
+
+    .tabs__content-item {
+        gap: 40px;
     }
 }
